@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#grid {
+    display: grid;
+    gap: 2px;
+}
+
+.tile {
+    background: white;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.tile.flipped {
+    transform: rotateY(180deg);
+}
+
+.tile.black {
+    background: rgb(19, 19, 19) !important;
+    border: 1px solid #444;
+}
+
+.anafooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #444;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #c53cff, #b200ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #b200ff, 0 0 10px #c53cff;
+    }
+    100% {
+        text-shadow: 0 0 20px #c53cff, 0 0 30px #b200ff
+    }
+}
